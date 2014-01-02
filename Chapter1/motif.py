@@ -16,7 +16,7 @@ def subs(handle):
     dna = dna.rstrip()
     motif = motif.rstrip()
 
-    # Use a list comprehension using Reg Exps
+    # Use a list comprehension using Regular Expressions
     # Use a look ahead assertion when using Reg Exp
 
     forward = '(?='
