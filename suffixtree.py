@@ -7,6 +7,9 @@ class SuffixTree(object):
         self.genome = genome
 
 
+    def constructTree(self, genome):
+
+
     def root(self):
         """
         This function returns the root node of object Tree
