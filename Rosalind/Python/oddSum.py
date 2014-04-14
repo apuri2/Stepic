@@ -1,9 +1,10 @@
 __author__ = 'apuri'
 
-def oddSum(a, b):
+
+def oddsum(a, b):
     # Initialize sum at 0
-    sum = 0
-    for i in  range(a, b+1):
+    sumtotal = 0
+    for i in range(a, b+1):
         # Use the mod operator to determine if number is odd
         # If the number is odd then it gets added to sum and
         # is equal to the new sum.
@@ -14,5 +15,5 @@ def oddSum(a, b):
         # we would unintentionally skip this number in calculating
         # the final sum.
         if i%2 == 1:
-            sum = sum + i
-    return sum
+            sumtotal = sumtotal + i
+    return sumtotal

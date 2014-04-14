@@ -1,6 +1,6 @@
 import time
 
-f = open("E-coli.txt",'r')  #input from a large file, 4.2MB
+f = open("E-coli.txt", 'r')  # input from a large file, 4.2MB
 genome = f.read()
 
 start_time = time.time()
@@ -21,10 +21,10 @@ for i in range(len(genome)-motif_len):
     # The value of the dictionary is the list motif[].
     # motif[0] is an accumulator and take trace of how many times the motif is repeated
     # from motif[1] it traces the index of founded motif
-        motif_dict[motif] = [1,i]
+        motif_dict[motif] = [1, i]
     else:
-        motif_dict[motif][0] += 1 # accumulate the count
-        motif_dict[motif].append(i) # append() to the list the index of all motif
+        motif_dict[motif][0] += 1  # accumulate the count
+        motif_dict[motif].append(i)  # append() to the list the index of all motif
 
 
 for motif in motif_dict:
@@ -36,8 +36,8 @@ for motif in motif_dict:
                     list.append(motif)
 
 
-print(len(list)),
+print(len(list))
 
 f.close()
-print('\nexecution time'),
+print('\nexecution time')
 print(str(time.time() - start_time) + ' seconds\n')
