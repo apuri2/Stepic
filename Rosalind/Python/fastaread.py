@@ -1,18 +1,24 @@
-__author__ = 'apuri'
+def fastaread(handle):
+    """
+    file -> list, list
+    Reads a fasta file and returns all the ids and sequences corresponding to those ids
+    inside an array.
 
-def fastaread(filehandle):
-
+    TODO:
+    Need to figure out how to return generators instead to save space for really large
+    files.
+    """
     # Initialize some arrays to return first
     fastaid = []
     seqarray = []
 
     # Open file
-    f = openandread(handle)
+    f = open(handle, 'r')
 
     # First while True:/Break idiom to pass any and all blank spaces
     while True:
-        line = f.readline
-        if line is empty:
+        line = f.readline()
+        if not line:
             return
         if line[0] is '>':           # If we find a fasta id however, then we break
             break
@@ -24,22 +30,21 @@ def fastaread(filehandle):
 
     while True:
         if not line.startswith('>'):
-            raise Error(
-                    "Records in FASTA files should start with '>' character")
+            raise ValueError("Records in FASTA files should start with > character")
 
-        title = line[1:end].rstrip()
+        title = line[1:].rstrip()
         fastaid.append(title)
 
-        # Initialize our seqdata variable. This one will store one single sequence
+        # Initialize our seqdata variable. This one will store one single sequence.
         seqdata = []
 
         line = f.readline()
 
-        # This second while True:/Break idiom extract the sequence data
+        # This second while True:/Break idiom extracts the sequence data.
         while True:
             if not line:
                 break
-            if line [0] == '>':       # Check to see if we're onto the next record
+            if line[0] == '>':       # Check to see if we're onto the next record
                 break
             seqdata.append(line.rstrip())
             line = f.readline()
@@ -52,3 +57,5 @@ def fastaread(filehandle):
         # of ids and sequences
         if not line:
             return fastaid, seqarray
+
+    f.close()

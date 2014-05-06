@@ -2,7 +2,7 @@ __author__ = 'apuri'
 
 
 def expOffSpring(population):
-    probability = [1, 1, 1, 3 / 4, 1 / 4, 0]
+    probability = [1, 1, 1, 3 / 4, 1 / 2, 0]
     listExpOffSpring = []
 
     for i in range(len(population)):
