@@ -1,14 +1,21 @@
 __author__ = 'apuri'
 
 
-class SuffixTree(object):
+class UkkonenTree(object):
 
     class Node(object):
-        pass
+        """
+        The Node class.
+        """
+        def __init__(self):
+            if self.id
+
 
     class Edge(object):
-        pass
+        """
+        The Edge class. What does it consist of?
+        Can it exist independently outside of UkkonenTree?
+        """
 
     def __init__(self):
         # Construct the base suffix tree for a string
-        pass
