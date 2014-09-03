@@ -1,7 +1,7 @@
 __author__ = 'apuri'
 
 
-def oddsum(a, b):
+def oddSum(a, b):
     # Initialize sum at 0
     sumtotal = 0
     for i in range(a, b+1):
@@ -15,5 +15,5 @@ def oddsum(a, b):
         # we would unintentionally skip this number in calculating
         # the final sum.
         if i%2 == 1:
-            sumtotal = sumtotal + i
+            sumtotal += i
     return sumtotal

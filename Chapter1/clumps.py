@@ -1,4 +1,4 @@
-f = open("dataset_4_4.txt", "r")
+f = open("data/dataset_4_4.txt", "r")
 genome = f.readline()
 genome = genome.rstrip()
 variables = f.readline()
